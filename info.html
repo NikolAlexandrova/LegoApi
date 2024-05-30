@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <title>Lego Set Details</title>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-black text-white p-4 flex justify-between items-center">
+        <img src="Images/1P9n6.png" alt="Lego Logo" class="h-12">
+        <div>
+            <a href="home.html" class="p-4 hover:border-b-2 border-red-600" id="home-link">Home</a>
+            <a href="sets.html" class="p-4 hover:border-b-2 border-red-600" id="sets-link">Sets</a>
+        </div>
+    </nav>
+
+    <main class="flex flex-wrap justify-center mt-16 p-4">
+        <section class="w-full md:w-1/2 max-w-lg p-4">
+            <figure class="relative">
+                <img id="main-image" src="" alt="Lego Set Image" class="w-full rounded-lg shadow-md">
+            </figure>
+        </section>
+        <section class="w-full md:w-1/2 p-4">
+            <h1 id="set-title" class="text-2xl font-bold mb-4">Lego Set Title</h1>
+            <article class="details">
+                <aside class="flex items-center mb-4">
+                    <p class="text-lg">Year: <span id="set-years"></span></p>
+                </aside>
+                <aside class="flex items-center mb-4">
+                    <p class="text-lg">Pieces: <span id="set-pieces"></span></p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <section class="p-4">
+        <h2 class="text-xl font-semibold mb-4 text-center">Parts</h2>
+        <section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="parts-container">
+            <!-- Parts will be dynamically loaded here -->
+        </section>
+    </section>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
