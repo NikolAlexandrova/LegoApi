@@ -18,7 +18,7 @@ async function fetchLegoSet(setNumber) {
     }
 }
 
-// Function to display LEGO sets
+// Function to display LEGO sets on the main page
 async function displayLegoSets() {
     const cards = document.querySelectorAll('.services-card');
 
@@ -45,12 +45,12 @@ async function displayLegoSets() {
     });
 }
 
-// Function to navigate to details page
+// Function to navigate to the details page for a specific LEGO set
 function navigateToDetails(setNumber) {
     window.location.href = `info.html?setNumber=${setNumber}`;
 }
 
-// Function to get query parameter from URL
+// Function to get query parameter from the URL
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -60,7 +60,7 @@ const setNumber = getQueryParameter('setNumber');
 const API_URL_SET = `https://rebrickable.com/api/v3/lego/sets/${setNumber}/`;
 const API_URL_PARTS = `https://rebrickable.com/api/v3/lego/sets/${setNumber}/parts/`;
 
-// Function to fetch set data
+// Function to fetch data for a specific LEGO set
 async function fetchSetData() {
     try {
         const response = await fetch(API_URL_SET, {
@@ -75,7 +75,7 @@ async function fetchSetData() {
     }
 }
 
-// Function to fetch parts data
+// Function to fetch parts data for a specific LEGO set
 async function fetchPartsData() {
     try {
         const response = await fetch(API_URL_PARTS, {
@@ -90,7 +90,7 @@ async function fetchPartsData() {
     }
 }
 
-// Function to display set data
+// Function to display data for a specific LEGO set on the details page
 async function displaySetData() {
     const setData = await fetchSetData();
     if (!setData) return;
@@ -109,7 +109,7 @@ async function displaySetData() {
     if (setPieces) setPieces.textContent = setData.num_parts;
 }
 
-// Function to display parts data
+// Function to display parts data for a specific LEGO set on the details page
 async function displayPartsData() {
     const partsData = await fetchPartsData();
     if (!partsData) return;
@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySetData();
     displayPartsData();
 
+    // Highlight the current navigation link
     const currentPage = window.location.pathname.split('/').pop();
     const homeLink = document.getElementById('home-link');
     const setsLink = document.getElementById('sets-link');

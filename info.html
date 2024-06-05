@@ -2,28 +2,39 @@
 <html lang="en">
 
 <head>
+    <!-- Specifies the character encoding for the HTML document -->
     <meta charset="UTF-8">
+    <!-- Sets the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the Tailwind CSS stylesheet for styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Links to Google Fonts for custom fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <!-- Title of the webpage -->
     <title>Lego Set Details</title>
 </head>
 
 <body class="bg-gray-100">
+    <!-- Navigation bar -->
     <nav class="bg-black text-white p-4 flex justify-between items-center">
+        <!-- Logo image -->
         <img src="Images/1P9n6.png" alt="Lego Logo" class="h-12">
+        <!-- Navigation links -->
         <div>
             <a href="home.html" class="p-4 hover:border-b-2 border-red-600" id="home-link">Home</a>
             <a href="sets.html" class="p-4 hover:border-b-2 border-red-600" id="sets-link">Sets</a>
         </div>
     </nav>
 
+    <!-- Main content section -->
     <main class="flex flex-wrap justify-center mt-16 p-4">
+        <!-- Section for the main image of the LEGO set -->
         <section class="w-full md:w-1/2 max-w-lg p-4">
             <figure class="relative">
                 <img id="main-image" src="" alt="Lego Set Image" class="w-full rounded-lg shadow-md">
             </figure>
         </section>
+        <!-- Section for the LEGO set details -->
         <section class="w-full md:w-1/2 p-4">
             <h1 id="set-title" class="text-2xl font-bold mb-4">Lego Set Title</h1>
             <article class="details">
@@ -37,13 +48,16 @@
         </section>
     </main>
 
+    <!-- Section for displaying parts of the LEGO set -->
     <section class="p-4">
         <h2 class="text-xl font-semibold mb-4 text-center">Parts</h2>
+        <!-- Grid container for dynamically loaded parts -->
         <section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="parts-container">
             <!-- Parts will be dynamically loaded here -->
         </section>
     </section>
 
+    <!-- JavaScript file link -->
     <script src="js.js"></script>
 </body>
 

@@ -2,18 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Specifies the character encoding for the HTML document -->
     <meta charset="UTF-8">
+    <!-- Sets the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the Tailwind CSS stylesheet for styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Links to Google Fonts for custom fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <!-- Title of the webpage -->
     <title>Your Website</title>
 </head>
 
 <body class="overflow-x-hidden">
 
+    <!-- Navigation bar section -->
     <nav class="bg-black text-white fixed w-full top-0 z-50">
         <section class="flex justify-between items-center p-4">
+            <!-- Logo image -->
             <img src="Images/1P9n6.png" alt="Your Logo" class="h-12">
+            <!-- Navigation links -->
             <aside class="flex space-x-4">
                 <a href="home.html" id="home-link" class="p-4 hover:border-b-2 border-red-600">Home</a>
                 <a href="sets.html" id="sets-link" class="p-4 hover:border-b-2 border-red-600">Sets</a>
@@ -21,18 +29,24 @@
         </section>
     </nav>
 
+    <!-- Main content section -->
     <main class="text-center mt-40">
         <h1 class="text-2xl sm:text-4xl">Sets</h1>
     </main>
 
+    <!-- Cards section for displaying LEGO sets -->
     <section class="bg-white py-10">
         <article class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card template for dynamic content -->
             <section class="bg-white rounded-lg shadow-md overflow-hidden services-card">
+                <!-- Placeholder for card image -->
                 <img src="" alt="card_image" class="w-full card__image">
                 <aside class="p-6">
+                    <!-- Placeholder for card title -->
                     <h4 class="text-lg font-semibold class__title"><a href="#">Loading...</a></h4>
+                    <!-- Placeholder for card text -->
                     <p class="mt-2 text-gray-600 card__text">Set Number: </p>
+                    <!-- Button for more information -->
                     <button class="mt-4 bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition transform hover:scale-105 more-btn">More</button>
                 </aside>
             </section>
@@ -56,6 +70,7 @@
             <!-- Add more cards as necessary -->
         </article>
 
+        <!-- Second set of cards for additional dynamic content -->
         <article class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 second-services-container">
             <!-- Additional card templates for dynamic content -->
             <section class="bg-white rounded-lg shadow-md overflow-hidden services-card">
@@ -87,6 +102,7 @@
         </article>
     </section>
 
+    <!-- JavaScript file link -->
     <script src="js.js"></script>
 </body>
 </html>
